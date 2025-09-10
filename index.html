@@ -28,21 +28,66 @@
   </button>
 
   <!-- Navigation -->
-  <nav class="bg-[#111] text-gray-100 sticky top-0 z-40 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="text-2xl font-bold">YSR</div>
-      <ul class="flex space-x-6 text-sm uppercase font-semibold">
-        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="#technology" class="hover:text-yellow-400">Technology</a></li>
-        <li><a href="#products" class="hover:text-yellow-400">Products</a></li>
-        <li><a href="#applications" class="hover:text-yellow-400">Applications</a></li>
-        <li><a href="#benefits" class="hover:text-yellow-400">Benefits</a></li>
-        <li><a href="#certifications" class="hover:text-yellow-400">Certifications</a></li>
-        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+<nav class="bg-black bg-opacity-90 fixed w-full z-20 top-0 left-0 border-b border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">YSR</span>
+    </a>
+    <button id="menu-toggle" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-700 focus:outline-none" aria-controls="navbar-default" aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-menu">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-900 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+        <li><a href="#home" class="block py-2 px-3 text-white hover:text-yellow-400">Home</a></li>
+        <li><a href="#technology" class="block py-2 px-3 text-white hover:text-yellow-400">Technology</a></li>
+        <li><a href="#products" class="block py-2 px-3 text-white hover:text-yellow-400">Products</a></li>
+        <li><a href="#applications" class="block py-2 px-3 text-white hover:text-yellow-400">Applications</a></li>
+        <li><a href="#benefits" class="block py-2 px-3 text-white hover:text-yellow-400">Benefits</a></li>
+        <li><a href="#certifications" class="block py-2 px-3 text-white hover:text-yellow-400">Certifications</a></li>
+        <li><a href="#about" class="block py-2 px-3 text-white hover:text-yellow-400">About</a></li>
+        <li><a href="#contact" class="block py-2 px-3 text-white hover:text-yellow-400">Contact</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<script>
+  // Toggle menu on mobile
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("navbar-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  });
+</script>
+
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="fixed bottom-6 right-6 bg-white bg-opacity-20 hover:bg-opacity-40 text-white font-bold py-2 px-3 rounded-full shadow-lg z-50">
+  <svg class="w-6 h-6 mx-auto" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  // Show/hide Back to Top button
+  let backToTopBtn = document.getElementById("backToTopBtn");
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
 
   <!-- Hero Section -->
   <section id="home" class="parallax min-h-screen flex items-center justify-center text-center px-4">
@@ -182,12 +227,6 @@
     </div>
   </section>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Go to top"
-    class="fixed bottom-5 right-5 bg-yellow-400 text-black font-bold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-500 z-50 hidden">
-    ↑
-  </button>
-
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
     <p>&copy; <span id="year"></span> YSR – All rights reserved.</p>
@@ -208,19 +247,6 @@
     }, appearOptions);
 
     reveals.forEach(reveal => appearOnScroll.observe(reveal));
-
-    // Back to Top
-    const backToTopBtn = document.getElementById("backToTop");
-    window.onscroll = () => {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        backToTopBtn.classList.remove("hidden");
-      } else {
-        backToTopBtn.classList.add("hidden");
-      }
-    };
-    backToTopBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
 
     // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
