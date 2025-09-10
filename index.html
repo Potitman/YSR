@@ -1,143 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YSR | Advanced Pyrolysis Solutions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#4CAF50',
-            secondary: '#2563EB',
-            dark: '#1F2937'
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body class="text-gray-800 scroll-smooth">
-
-  <!-- Fixed Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-dark">YSR</h1>
-      <nav class="space-x-4 hidden md:block">
-        <a href="#home" class="hover:text-primary">Home</a>
-        <a href="#technology" class="hover:text-primary">Technology</a>
-        <a href="#products" class="hover:text-primary">Products</a>
-        <a href="#applications" class="hover:text-primary">Applications</a>
-        <a href="#benefits" class="hover:text-primary">Benefits</a>
-        <a href="#about" class="hover:text-primary">About</a>
-        <a href="#contact" class="bg-primary text-white px-4 py-2 rounded hover:bg-green-600">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="pt-24 space-y-32">
-
-    <!-- Home -->
-    <section id="home" class="max-w-5xl mx-auto px-4 text-center">
-      <h1 class="text-4xl font-bold mb-4 text-dark">Turn Waste into Profit with YSR’s Advanced Pyrolysis Solutions</h1>
-      <p class="text-lg mb-6">At YSR, we transform waste into opportunity. Our cutting-edge modular pyrolysis plants efficiently convert end-of-life tires and plastics into high-value pyrolysis oil, carbon black, and renewable energy. Achieve rapid ROI, reduce environmental impact, and lead the way in sustainable innovation.</p>
-      <ul class="mb-6 space-y-1 text-left list-disc list-inside max-w-xl mx-auto">
-        <li>Rapid investment returns</li>
-        <li>Eco-friendly technology</li>
-        <li>Scalable solutions for any business size</li>
-      </ul>
-      <a href="#contact" class="bg-primary text-white px-6 py-3 rounded hover:bg-green-600">Contact us today!</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YSR | Advanced Pyrolysis Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans scroll-smooth">
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-b from-black to-gray-800 min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-green-400">Turn Waste into Profit with YSR’s Advanced Pyrolysis Solutions</h1>
+      <p class="max-w-2xl text-lg text-gray-300 mb-6">
+        Transforming waste into opportunity: Our modular pyrolysis plants convert end-of-life plastics into oil, carbon black, and energy.
+      </p>
+      <a href="#contact" class="bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-6 rounded-full transition">Get Your Consultation</a>
     </section>
 
-    <!-- Technology -->
-    <section id="technology" class="bg-gray-50 py-16 px-4">
+    <!-- TECHNOLOGY SECTION -->
+    <section id="technology" class="py-20 bg-gray-800 px-6">
       <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">Next-Generation Pyrolysis Technology for a Sustainable Future</h2>
-        <p class="mb-4">YSR’s cutting-edge pyrolysis systems transform waste into valuable resources with industry-leading efficiency and environmental responsibility.</p>
-        <ul class="text-left list-disc list-inside mb-4 max-w-2xl mx-auto">
-          <li>Pyrolysis Oil – a valuable alternative fuel or chemical feedstock</li>
-          <li>Carbon Black – for rubber, plastics, and industrial applications</li>
-          <li>Syngas – reused for plant energy or captured for industrial use</li>
-          <li>Recovered Metals – cleanly separated for resale or recycling</li>
-        </ul>
-        <ul class="text-left list-disc list-inside max-w-2xl mx-auto">
-          <li>Automated, low-maintenance operation</li>
-          <li>Minimal emissions meeting global environmental standards</li>
-          <li>Energy self-sufficiency through integrated syngas recovery</li>
-          <li>Modular, scalable design adaptable to a range of project sizes</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="max-w-5xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Modular and Compact Pyrolysis Plants for Every Business Need</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Modular Pyrolysis Plant (18 t/day)</h3>
-          <ul class="list-disc list-inside mb-4">
-            <li>High-capacity output</li>
-            <li>Fully automated and easy to operate</li>
-            <li>Rapid ROI and reduced operational costs</li>
+        <h2 class="text-3xl font-bold text-green-400 mb-6">Next-Generation Pyrolysis Technology</h2>
+        <p class="text-gray-300 mb-4">Transform waste into valuable resources with industry-leading efficiency.</p>
+        <div class="grid md:grid-cols-2 gap-8 mt-10 text-left">
+          <ul class="space-y-3 text-gray-300">
+            <li>✅ Pyrolysis Oil – Alternative fuel or feedstock</li>
+            <li>✅ Carbon Black – Industrial applications</li>
+            <li>✅ Syngas – Used to power the plant</li>
+            <li>✅ Recovered Metals – For recycling or resale</li>
           </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Compact Pyrolysis Plant (4 t/day)</h3>
-          <ul class="list-disc list-inside mb-4">
-            <li>Transportable and space-efficient</li>
-            <li>Fast setup and commissioning</li>
-            <li>Scalable for growing businesses</li>
+          <ul class="space-y-3 text-gray-300">
+            <li>⚙️ Automated, low-maintenance systems</li>
+            <li>🌍 Minimal emissions (meets EU norms)</li>
+            <li>🔁 Energy self-sufficient (via syngas)</li>
+            <li>🔧 Modular & scalable to your needs</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Applications -->
-    <section id="applications" class="bg-gray-50 py-16 px-4">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">Unlock New Revenue Streams with YSR Pyrolysis Solutions</h2>
-        <ul class="text-left list-disc list-inside max-w-2xl mx-auto mb-6">
-          <li>Waste tires (ELT - End-of-Life Tires)</li>
-          <li>Post-consumer plastics (PP, PE, PS)</li>
-          <li>Industrial and mixed plastic waste</li>
-        </ul>
-        <p>End Products: Pyrolysis oil, Carbon black, Syngas, Recovered metals</p>
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="py-20 bg-gray-900 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-400 mb-12">Modular Pyrolysis Plants</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow">
+            <h3 class="text-2xl font-semibold text-white mb-3">Compact Plant (4 t/day)</h3>
+            <ul class="text-gray-300 space-y-2 text-left">
+              <li>🚚 Transportable & modular</li>
+              <li>⚡ Maintains cashflow during downtime of other units</li>
+              <li>🏗️ Fast setup, space-saving design</li>
+              <li>🔁 Recommended: operate 4 units simultaneously</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow">
+            <h3 class="text-2xl font-semibold text-white mb-3">Industrial Plant (18 t/day)</h3>
+            <ul class="text-gray-300 space-y-2 text-left">
+              <li>🏭 High-capacity output</li>
+              <li>🧠 Automated & low-cost operation</li>
+              <li>⚙️ Gas from one reactor fuels the second</li>
+              <li>💰 Strong ROI & reduced costs</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Benefits -->
-    <section id="benefits" class="max-w-5xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Why YSR? Maximizing Profitability While Minimizing Environmental Impact</h2>
-      <ul class="text-left list-disc list-inside max-w-xl mx-auto space-y-1">
-        <li>Fast ROI: 2–3 years</li>
-        <li>Lower disposal and landfill costs</li>
-        <li>Low-emission, energy self-sufficient operation</li>
-        <li>High-demand product outputs</li>
-      </ul>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="bg-gray-50 py-16 px-4">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">YSR – Pioneering Sustainable Waste Management Solutions</h2>
-        <p class="mb-4">At YSR, we believe in a cleaner, more profitable future. Combining decades of engineering expertise with a commitment to sustainability, we deliver world-class modular pyrolysis systems tailored to the evolving needs of industry and the environment.</p>
-        <p class="mb-2 font-semibold">Our Mission:</p>
-        <p class="mb-4">To revolutionize waste management by turning environmental challenges into economic opportunities.</p>
-        <p class="mb-2 font-semibold">Our Promise:</p>
-        <p>Innovative solutions, dependable service, and lasting partnerships.</p>
+    <!-- APPLICATIONS SECTION -->
+    <section id="applications" class="py-20 bg-gray-800 px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-400 mb-6">What Can We Process?</h2>
+      <p class="text-gray-300 mb-10">YSR plants convert the following waste streams into valuable resources:</p>
+      <div class="grid md:grid-cols-3 gap-8 text-gray-200">
+        <div>♻️ Post-consumer plastics (PP, PE, PS)</div>
+        <div>🏭 Industrial plastic waste</div>
+        <div>🔥 Output: Oil, Carbon Black, Syngas, Metals</div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="max-w-5xl mx-auto px-4 text-center py-16">
-      <h2 class="text-3xl font-bold mb-4">Get in Touch with YSR</h2>
-      <p class="mb-4">We’re ready to support your waste recycling ambitions. Contact us today for more information or a customized proposal.</p>
-      <a href="mailto:info@ysr.sk" class="bg-primary text-white px-6 py-3 rounded hover:bg-green-600">info@ysr.sk</a>
+    <!-- BENEFITS SECTION -->
+    <section id="benefits" class="py-20 bg-gray-900 px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-400 mb-6">Why Choose YSR?</h2>
+      <div class="grid md:grid-cols-4 gap-6 text-gray-300">
+        <div>💸 ROI in 2–3 years</div>
+        <div>📉 Reduced landfill & disposal costs</div>
+        <div>🌱 ESG & environmental leadership</div>
+        <div>🛠️ Produce high-demand commodities</div>
+      </div>
     </section>
 
-  </main>
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-20 bg-gray-800 px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-400 mb-6">About YSR</h2>
+      <p class="text-gray-300 max-w-3xl mx-auto mb-4">At YSR, we combine decades of engineering with sustainability to deliver modular pyrolysis plants that turn waste into opportunity.</p>
+      <p class="text-gray-300 max-w-2xl mx-auto">Our mission: Turn environmental challenges into economic opportunities. Our promise: Innovation, reliability, and partnership.</p>
+    </section>
 
-</body>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-gray-900 px-6 text-center">
+      <h2 class="text-3xl font-bold text-green-400 mb-6">Contact Us</h2>
+      <p class="text-gray-300 mb-4">Let’s talk about your project. Get a custom proposal today.</p>
+      <p class="text-gray-400">📧 ysr@ysr.sk</p>
+      <p class="text-gray-400">🌍 www.ysr.sk</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-6 text-center bg-black text-gray-500 text-sm">
+      © 2025 YSR. All rights reserved.
+    </footer>
+  </body>
 </html>
