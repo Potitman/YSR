@@ -5,50 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="YSR offers advanced modular pyrolysis solutions that convert waste tires and plastics into valuable resources like fuel, carbon black, and energy. Achieve rapid ROI with eco-friendly technology." />
   <title>YSR – Pyrolysis Solutions</title>
+  <link rel="icon" href="assets/images/logo-ysr-horizontal%20Medium.png" type="image/png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s ease, transform .8s ease; }
     .fade-in { opacity: 1; transform: translateY(0); }
-    .parallax {
-      background-image: url('https://images.unsplash.com/photo-1600267165985-107bf22dbaeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    .parallax{
+      /* hero background – môžeš prehodiť aj na plant-overview-wide-01.jpg */
+      background-image:url('assets/images/feedstock-mixed-plastics%20Large.jpeg');
+      background-attachment:fixed;background-position:center;background-size:cover;background-repeat:no-repeat;
     }
+    /* Back-to-top (priehľadný kruh, biela šípka) */
+    #backToTopBtn{display:none}
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
 
-<!-- Responsive Navigation -->
-<nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+<!-- NAV -->
+<nav class="bg-black/90 text-white sticky top-0 z-50 shadow-md">
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo -->
-    <div class="text-xl font-bold">YSR</div>
-
-    <!-- Hamburger Icon (only on mobile) -->
-    <button id="menu-toggle" class="lg:hidden focus:outline-none">
+    <a href="#home" class="flex items-center space-x-3">
+      <img src="assets/images/logo-ysr-horizontal%20Medium.png" alt="YSR company logo" class="h-8 w-auto" loading="lazy" decoding="async">
+      <span class="sr-only">YSR</span>
+    </a>
+    <!-- Hamburger -->
+    <button id="menu-toggle" class="lg:hidden p-2 rounded hover:bg-gray-800 focus:outline-none" aria-label="Open menu">
       <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-
-    <!-- Desktop Menu -->
+    <!-- Desktop menu -->
     <div id="menu" class="hidden lg:flex space-x-6 font-medium">
-      <a href="#home" class="hover:text-yellow-400 transition">Home</a>
-      <a href="#technology" class="hover:text-yellow-400 transition">Technology</a>
-      <a href="#products" class="hover:text-yellow-400 transition">Products</a>
-      <a href="#applications" class="hover:text-yellow-400 transition">Applications</a>
-      <a href="#benefits" class="hover:text-yellow-400 transition">Benefits</a>
-      <a href="#certifications" class="hover:text-yellow-400 transition">Certifications</a>
-      <a href="#about" class="hover:text-yellow-400 transition">About</a>
-      <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+      <a href="#home" class="hover:text-yellow-400">Home</a>
+      <a href="#technology" class="hover:text-yellow-400">Technology</a>
+      <a href="#products" class="hover:text-yellow-400">Products</a>
+      <a href="#applications" class="hover:text-yellow-400">Applications</a>
+      <a href="#benefits" class="hover:text-yellow-400">Benefits</a>
+      <a href="#certifications" class="hover:text-yellow-400">Certifications</a>
+      <a href="#about" class="hover:text-yellow-400">About</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact</a>
     </div>
   </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4 space-y-2 font-medium">
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4 space-y-2 font-medium bg-black/90">
     <a href="#home" class="block hover:text-yellow-400">Home</a>
     <a href="#technology" class="block hover:text-yellow-400">Technology</a>
     <a href="#products" class="block hover:text-yellow-400">Products</a>
@@ -60,135 +61,191 @@
   </div>
 </nav>
 
-<script>
-  // Toggle mobile menu
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const desktopMenu = document.getElementById('menu');
+<!-- HERO -->
+<section id="home" class="parallax min-h-[85vh] flex items-center justify-center text-center px-4">
+  <div class="bg-black/65 p-8 md:p-12 rounded-2xl reveal max-w-3xl shadow-xl">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-yellow-400">Turn Waste into Profit with YSR’s Advanced Pyrolysis Solutions</h1>
+    <p class="text-lg md:text-xl mb-6">At YSR, we transform waste into opportunity. Our cutting-edge modular pyrolysis plants efficiently convert end-of-life tires and plastics into high-value pyrolysis oil, carbon black, and renewable energy. Achieve rapid ROI, reduce environmental impact, and lead the way in sustainable innovation.</p>
+    <ul class="text-left list-disc list-inside mb-6 space-y-1">
+      <li>Rapid investment returns</li>
+      <li>Eco-friendly technology</li>
+      <li>Scalable solutions for any business size</li>
+    </ul>
+    <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg shadow-lg inline-block">Contact us today</a>
+  </div>
+</section>
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  });
-</script>
+<!-- WRAPPER -->
+<main class="space-y-20">
 
-<!-- Back to Top Button -->
-<button onclick="topFunction()" id="backToTopBtn" title="Go to top" class="fixed bottom-6 right-6 bg-white bg-opacity-20 hover:bg-opacity-40 text-white font-bold py-2 px-3 rounded-full shadow-lg z-50">
-  <svg class="w-6 h-6 mx-auto" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-  </svg>
-</button>
-
-<script>
-  // Show/hide Back to Top button
-  let backToTopBtn = document.getElementById("backToTopBtn");
-  window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  };
-
-  // Scroll to top
-  function topFunction() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-</script>
-
-  <!-- Hero Section -->
-  <section id="home" class="parallax min-h-screen flex items-center justify-center text-center px-4">
-    <div class="bg-black bg-opacity-60 p-10 rounded-lg reveal max-w-3xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">Turn Waste into Profit with YSR’s Advanced Pyrolysis Solutions</h1>
-      <p class="text-lg mb-6">At YSR, we transform waste into opportunity. Our cutting-edge modular pyrolysis plants efficiently convert end-of-life tires and plastics into high-value pyrolysis oil, carbon black, and renewable energy. Achieve rapid ROI, reduce environmental impact, and lead the way in sustainable innovation.</p>
-      <ul class="text-left list-disc list-inside mb-6 space-y-1">
-        <li>Rapid investment returns</li>
-        <li>Eco-friendly technology</li>
-        <li>Scalable solutions for any business size</li>
-      </ul>
-      <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg shadow-lg inline-block">Contact us today</a>
-    </div>
-  </section>
-
-  <!-- Technology Section -->
+  <!-- TECHNOLOGY -->
   <section id="technology" class="py-20 px-6 bg-gray-800 reveal">
-    <div class="max-w-5xl mx-auto text-center">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-yellow-400 mb-6">Next-Generation Pyrolysis Technology for a Sustainable Future</h2>
-      <p class="mb-6">YSR’s cutting-edge pyrolysis systems transform waste into valuable resources with industry-leading efficiency and environmental responsibility.</p>
-      <ul class="mb-6 text-left list-disc list-inside max-w-2xl mx-auto">
+      <p>YSR’s cutting-edge pyrolysis systems transform waste into valuable resources with industry-leading efficiency and environmental responsibility.</p>
+
+      <ul class="mb-6 mt-4 list-disc list-inside">
         <li>Pyrolysis Oil – a valuable alternative fuel or chemical feedstock</li>
         <li>Carbon Black – for rubber, plastics, and industrial applications</li>
         <li>Syngas – reused for plant energy or captured for industrial use</li>
         <li>Recovered Metals – cleanly separated for resale or recycling</li>
       </ul>
-      <p class="mb-6 font-semibold">Key advantages of YSR technology:</p>
-      <ul class="mb-6 text-left list-disc list-inside max-w-2xl mx-auto">
+
+      <p class="font-semibold mb-2">Key advantages of YSR technology:</p>
+      <ul class="list-disc list-inside">
         <li>Automated, low-maintenance operation</li>
         <li>Minimal emissions meeting global environmental standards</li>
         <li>Energy self-sufficiency through integrated syngas recovery</li>
         <li>Modular, scalable design adaptable to a range of project sizes</li>
       </ul>
-      <a href="#contact" class="mt-4 inline-block bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-500">Speak to our experts</a>
+
+      <!-- Schematic / modules -->
+      <div class="mt-10 bg-gray-900 rounded-xl overflow-hidden">
+        <img src="assets/images/system-modules-annotated%20Medium.png"
+             alt="YSR pyrolysis plant modules overview (reactor, scrubber, condenser, heating, control, cooling)"
+             class="w-full h-auto" loading="lazy" decoding="async">
+      </div>
+
+      <!-- Tech photo trio -->
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="bg-gray-900 rounded-lg overflow-hidden">
+          <img src="assets/images/plant-overview-wide-02.jpg" alt="Overhead view of reactor line"
+               class="w-full h-48 object-cover" loading="lazy" decoding="async">
+          <figcaption class="p-4 text-sm text-gray-300">High-efficiency reactor line</figcaption>
+        </figure>
+        <figure class="bg-gray-900 rounded-lg overflow-hidden">
+          <img src="assets/images/condenser-vessel.jpg" alt="Condenser vessel with pressure gauge"
+               class="w-full h-48 object-cover" loading="lazy" decoding="async">
+          <figcaption class="p-4 text-sm text-gray-300">Closed-loop gas cleaning</figcaption>
+        </figure>
+        <figure class="bg-gray-900 rounded-lg overflow-hidden">
+          <img src="assets/images/reactor-drive-closeup%20Medium.jpg" alt="Reactor drive and sealing detail"
+               class="w-full h-48 object-cover" loading="lazy" decoding="async">
+          <figcaption class="p-4 text-sm text-gray-300">Robust drive & sealing</figcaption>
+        </figure>
+      </div>
+
+      <a href="#contact" class="mt-8 inline-block bg-yellow-400 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-500">Speak to our experts</a>
     </div>
   </section>
 
-  <!-- Products Section -->
+  <!-- PRODUCTS -->
   <section id="products" class="py-20 px-6 bg-gray-900 reveal">
-    <div class="max-w-6xl mx-auto text-center">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-yellow-400 mb-10">Modular and Compact Pyrolysis Plants for Every Business Need</h2>
+
       <div class="grid md:grid-cols-2 gap-10">
-        <!-- 18 t/day plant -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left">
-          <h3 class="text-xl font-bold mb-4">Modular Pyrolysis Plant (18 t/day)</h3>
-          <p class="mb-4">Designed for industrial-scale operations, our 18-ton per day plant delivers unmatched efficiency and profitability. Featuring robust engineering, automated operation, and superior yields, it’s the ideal choice for companies ready to lead the recycling revolution.</p>
-          <ul class="list-disc list-inside mb-4">
-            <li>High-capacity output</li>
-            <li>Fully automated and easy to operate</li>
-            <li>Rapid ROI and reduced operational costs</li>
-          </ul>
+        <!-- 18 t/day -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg text-left">
+          <img src="assets/images/plant-dual-reactor-front.jpg" alt="Dual pyrolysis reactors – front view"
+               class="w-full h-56 object-cover" loading="lazy" decoding="async">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-4">Modular Pyrolysis Plant (18 t/day)</h3>
+            <p class="mb-4">Designed for industrial-scale operations, our 18-ton per day plant delivers unmatched efficiency and profitability. Featuring robust engineering, automated operation, and superior yields, it’s the ideal choice for companies ready to lead the recycling revolution.</p>
+            <ul class="list-disc list-inside mb-2">
+              <li>High-capacity output</li>
+              <li>Fully automated and easy to operate</li>
+              <li>Rapid ROI and reduced operational costs</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- 4 t/day plant -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left">
-          <h3 class="text-xl font-bold mb-4">Compact Pyrolysis Plant (4 t/day)</h3>
-          <p class="mb-4">Ideal for decentralized projects or smaller operations, our 4-ton plant offers the same innovative technology in a compact, modular format. Enjoy faster installation, lower startup investment, and full scalability without compromising on output quality.</p>
-          <ul class="list-disc list-inside mb-4">
-            <li>Transportable and space-efficient</li>
-            <li>Fast setup and commissioning</li>
-            <li>Scalable for growing businesses</li>
-          </ul>
+        <!-- 4 t/day -->
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg text-left">
+          <img src="assets/images/cad-reactor-iso2.png" alt="CAD render of YSR pyrolysis reactor"
+               class="w-full h-56 object-cover bg-gray-900" loading="lazy" decoding="async">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-4">Compact Pyrolysis Plant (4 t/day)</h3>
+            <p class="mb-4">Ideal for decentralized projects or smaller operations, our 4-ton plant offers the same innovative technology in a compact, modular format. Enjoy faster installation, lower startup investment, and full scalability without compromising on output quality.</p>
+            <ul class="list-disc list-inside mb-2">
+              <li>Transportable and space-efficient</li>
+              <li>Fast setup and commissioning</li>
+              <li>Scalable for growing businesses</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <!-- Products & Output (AI) – aktuálne 2 fotky, ďalšie doplníme -->
+      <section id="outputs" class="mt-12">
+        <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">Products & Output</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <figure class="bg-gray-800 rounded-lg overflow-hidden p-3 text-center">
+            <img src="assets/images/product-syngas-alt-ai%20Large.jpg" alt="Industrial flare stack burning syngas"
+                 class="w-full h-40 object-cover rounded" loading="lazy" decoding="async">
+            <figcaption class="mt-3 text-sm text-gray-300">Syngas</figcaption>
+          </figure>
+          <figure class="bg-gray-800 rounded-lg overflow-hidden p-3 text-center">
+            <img src="assets/images/carbon-black-ai%20Large.jpeg" alt="High-purity carbon black powder"
+                 class="w-full h-40 object-cover rounded" loading="lazy" decoding="async">
+            <figcaption class="mt-3 text-sm text-gray-300">Carbon Black</figcaption>
+          </figure>
+
+          <!-- TODO: When ready, add these two:
+          <figure class="bg-gray-800 rounded-lg overflow-hidden p-3 text-center">
+            <img src="assets/images/product-pyrolysis-oil-ai.jpg" alt="Pyrolysis oil in industrial drum and beaker"
+                 class="w-full h-40 object-cover rounded" loading="lazy" decoding="async">
+            <figcaption class="mt-3 text-sm text-gray-300">Pyrolysis Oil</figcaption>
+          </figure>
+          <figure class="bg-gray-800 rounded-lg overflow-hidden p-3 text-center">
+            <img src="assets/images/product-metal-cord-ai.jpg" alt="Recovered steel cord coil"
+                 class="w-full h-40 object-cover rounded" loading="lazy" decoding="async">
+            <figcaption class="mt-3 text-sm text-gray-300">Metal Cord</figcaption>
+          </figure>
+          -->
+        </div>
+      </section>
+
       <a href="#contact" class="mt-10 inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Request more info</a>
     </div>
   </section>
 
-  <!-- Applications Section -->
+  <!-- APPLICATIONS -->
   <section id="applications" class="py-20 px-6 bg-gray-800 reveal">
-    <div class="max-w-5xl mx-auto text-center">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-yellow-400 mb-6">Unlock New Revenue Streams with YSR Pyrolysis Solutions</h2>
-      <p class="mb-6">YSR plants can process a wide variety of waste streams, including:</p>
-      <ul class="mb-6 text-left list-disc list-inside max-w-xl mx-auto">
+      <p>YSR plants can process a wide variety of waste streams, including:</p>
+      <ul class="mb-6 mt-4 list-disc list-inside">
         <li>Waste tires (ELT - End-of-Life Tires)</li>
         <li>Post-consumer plastics (PP, PE, PS)</li>
         <li>Industrial and mixed plastic waste</li>
       </ul>
-      <p class="mb-6 font-semibold">End Products:</p>
-      <ul class="mb-6 text-left list-disc list-inside max-w-xl mx-auto">
+
+      <p class="mb-2 font-semibold">End Products:</p>
+      <ul class="list-disc list-inside">
         <li>Pyrolysis oil for marine fuel and industrial use</li>
         <li>Carbon black for rubber and manufacturing industries</li>
         <li>Syngas for onsite energy production</li>
       </ul>
-      <p class="mt-4">Our high-purity products open profitable opportunities in the marine fuel, chemical, and rubber manufacturing sectors.</p>
+
+      <!-- feedstock grid -->
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="bg-gray-900 rounded-lg overflow-hidden">
+          <img src="assets/images/feedstock-mixed-plastics%20Large.jpeg" alt="Mixed post-consumer plastics (PP/PE/PS)"
+               class="w-full h-48 object-cover" loading="lazy" decoding="async">
+          <figcaption class="p-4 text-sm text-gray-300">Post-consumer plastics (PP/PE/PS)</figcaption>
+        </figure>
+        <figure class="bg-gray-900 rounded-lg overflow-hidden">
+          <img src="assets/images/feedstock-elt-tyres-yard%20Large.jpeg" alt="End-of-life tires (ELT) stockpile"
+               class="w-full h-48 object-cover" loading="lazy" decoding="async">
+          <figcaption class="p-4 text-sm text-gray-300">End-of-life tires (ELT)</figcaption>
+        </figure>
+        <figure class="bg-gray-900 rounded-lg overflow-hidden">
+          <img src="assets/images/feedstock-pollution-site%20Large.jpeg" alt="Polluted landfill with contaminated pools"
+               class="w-full h-48 object-cover" loading="lazy" decoding="async">
+          <figcaption class="p-4 text-sm text-gray-300">Industrial & mixed waste</figcaption>
+        </figure>
+      </div>
+
+      <p class="mt-6">Our high-purity products open profitable opportunities in the marine fuel, chemical, and rubber manufacturing sectors.</p>
     </div>
   </section>
 
-  <!-- Benefits Section -->
+  <!-- BENEFITS -->
   <section id="benefits" class="py-20 px-6 bg-gray-900 reveal">
-    <div class="max-w-6xl mx-auto text-center">
+    <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-yellow-400 mb-6">Why YSR? Maximizing Profitability While Minimizing Environmental Impact</h2>
-      <ul class="mb-8 text-left list-disc list-inside max-w-2xl mx-auto">
+      <ul class="mb-8 list-disc list-inside max-w-3xl">
         <li><strong>Fast Return on Investment:</strong> Typical payback within 2–3 years.</li>
         <li><strong>Operational Savings:</strong> Significant reductions in waste disposal and landfill costs.</li>
         <li><strong>Environmental Leadership:</strong> Low-emission, energy self-sufficient plants boost your ESG credentials.</li>
@@ -198,67 +255,86 @@
     </div>
   </section>
 
-  <!-- Certifications Section -->
+  <!-- CERTIFICATIONS -->
   <section id="certifications" class="py-20 px-6 bg-gray-800 reveal">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-yellow-400 mb-6">Certified Excellence, Patented Innovation</h2>
-      <p class="mb-6">YSR’s technology is backed by:</p>
-      <ul class="mb-8 text-left list-disc list-inside max-w-2xl mx-auto">
-        <li>Internationally recognized certifications for quality and environmental compliance</li>
-        <li>Proprietary patents for our modular design and energy recovery systems</li>
-      </ul>
-      <p class="max-w-xl mx-auto">Our certified, patented technologies guarantee performance, safety, and market credibility—giving your business a competitive edge.</p>
-    </div>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about" class="py-20 px-6 bg-gray-900 reveal">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-yellow-400 mb-6">YSR – Pioneering Sustainable Waste Management Solutions</h2>
-      <p class="mb-6 max-w-3xl mx-auto">At YSR, we believe in a cleaner, more profitable future. Combining decades of engineering expertise with a commitment to sustainability, we deliver world-class modular pyrolysis systems tailored to the evolving needs of industry and the environment.</p>
-      <div class="mb-6">
-        <p class="font-semibold text-lg">Our Mission:</p>
-        <p class="mb-4">To revolutionize waste management by turning environmental challenges into economic opportunities.</p>
-        <p class="font-semibold text-lg">Our Promise:</p>
-        <p>Innovative solutions, dependable service, and lasting partnerships.</p>
+      <p class="mb-6">YSR’s technology is backed by internationally recognized certifications for quality and environmental compliance and proprietary innovations in modular design and energy recovery systems.</p>
+      <div class="mt-8 flex justify-center">
+        <img src="assets/images/certificate-tsu-conformity-2025.jpg"
+             alt="TSU Conformity Certificate 24TSU0121 (CE, LVD, EMC)"
+             class="max-h-[560px] w-auto rounded-lg shadow-2xl" loading="lazy" decoding="async">
       </div>
-      <a href="#contact" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Partner with YSR</a>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ABOUT -->
+  <section id="about" class="py-20 px-6 bg-gray-900 reveal">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6">YSR – Pioneering Sustainable Waste Management Solutions</h2>
+      <p class="mb-6">At YSR, we believe in a cleaner, more profitable future. Combining decades of engineering expertise with a commitment to sustainability, we deliver world-class modular pyrolysis systems tailored to the evolving needs of industry and the environment.</p>
+      <p class="font-semibold">Our Mission:</p>
+      <p class="mb-4">To revolutionize waste management by turning environmental challenges into economic opportunities.</p>
+      <p class="font-semibold">Our Promise:</p>
+      <p>Innovative solutions, dependable service, and lasting partnerships.</p>
+
+      <div class="mt-8">
+        <img src="assets/images/logo-ysr-stacked%20Medium.png" alt="YSR brand mark" class="h-20 w-auto opacity-80" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="py-20 px-6 bg-gray-800 reveal">
-    <div class="max-w-6xl mx-auto text-center">
+    <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-yellow-400 mb-6">Get in Touch with YSR</h2>
-      <p class="mb-6 max-w-2xl mx-auto">We’re ready to support your waste recycling ambitions. Contact us today for more information or a customized proposal.</p>
+      <p class="mb-6">We’re ready to support your waste recycling ambitions. Contact us today for more information or a customized proposal.</p>
       <p class="text-xl font-semibold">📧 <a href="mailto:ysr@ysr.sk" class="underline hover:text-yellow-300">ysr@ysr.sk</a></p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
-    <p>&copy; <span id="year"></span> YSR – All rights reserved.</p>
-  </footer>
+</main>
 
-  <!-- Scripts -->
-  <script>
-    // Scroll animation
-    const reveals = document.querySelectorAll('.reveal');
-    const appearOptions = { threshold: 0.1 };
+<!-- FOOTER -->
+<footer class="bg-gray-950 text-gray-400 py-6 text-center text-sm">
+  <p>&copy; <span id="year"></span> YSR – All rights reserved.</p>
+</footer>
 
-    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('fade-in');
-        appearOnScroll.unobserve(entry.target);
-      });
-    }, appearOptions);
+<!-- Back to Top (transparent circle, white arrow) -->
+<button onclick="topFunction()" id="backToTopBtn" aria-label="Back to top"
+  class="fixed bottom-6 right-6 bg-white/20 hover:bg-white/35 text-white p-3 rounded-full shadow-lg z-50">
+  <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
 
-    reveals.forEach(reveal => appearOnScroll.observe(reveal));
+<!-- Scripts -->
+<script>
+  // mobile menu
+  document.addEventListener('DOMContentLoaded', function () {
+    const t = document.getElementById('menu-toggle');
+    const mm = document.getElementById('mobile-menu');
+    const dm = document.getElementById('menu');
+    t.addEventListener('click', () => mm.classList.toggle('hidden'));
+  });
 
-    // Dynamic year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  // reveal on scroll
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fade-in'); obs.unobserve(e.target); }});
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // back to top
+  const btt = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => {
+    const sc = document.documentElement.scrollTop || document.body.scrollTop;
+    btt.style.display = sc > 120 ? 'block' : 'none';
+  });
+  function topFunction(){ window.scrollTo({top:0, behavior:'smooth'}); }
+
+  // year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
